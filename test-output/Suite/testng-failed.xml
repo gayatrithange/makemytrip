@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.makeMyTrip.selenium_cabsTests.RideTypeRadioButtonValidation">
+        <methods>
+          <include name="RideTypeRadioButtonTextTest" invocation-numbers="0 1 2 3"/>
+          <include name="CabsButtonClickTest"/>
+          <include name="tearDown"/>
+          <include name="VerifyOnlyOneRideTypeRadioButtonIsSelected"/>
+          <include name="RideTypeRadioButtonCountTest"/>
+        </methods>
+      </class> <!-- com.makeMyTrip.selenium_cabsTests.RideTypeRadioButtonValidation -->
+      <class name="com.makeMyTrip.selenium_cabsTests.TestClass">
+        <methods>
+          <include name="CabsButtonClickTest"/>
+          <include name="validOutstationOneWayCabSearch" invocation-numbers="0 1 2 3 5 6 7 8 9"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.makeMyTrip.selenium_cabsTests.TestClass -->
+      <class name="com.makeMyTrip.selenium_cabsTests.OutstationRoadTrip_Validation">
+        <methods>
+          <include name="addStopsButtonValidation"/>
+          <include name="CabsButtonClickTest"/>
+          <include name="tearDown"/>
+          <include name="validOutstationRoundTripCabSearch"/>
+          <include name="dropTimeButtonValidation"/>
+        </methods>
+      </class> <!-- com.makeMyTrip.selenium_cabsTests.OutstationRoadTrip_Validation -->
+      <class name="com.makeMyTrip.selenium_cabsTests.OutstationOneWay_Validations">
+        <methods>
+          <include name="CabsButtonClickTest"/>
+          <include name="tearDown"/>
+          <include name="SameInvalidOutstationOneWayCabSearch" invocation-numbers="15"/>
+          <include name="validOutstationOneWayCabSearch" invocation-numbers="5 7"/>
+        </methods>
+      </class> <!-- com.makeMyTrip.selenium_cabsTests.OutstationOneWay_Validations -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
