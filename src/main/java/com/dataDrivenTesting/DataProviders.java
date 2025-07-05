@@ -1,15 +1,4 @@
 package com.dataDrivenTesting;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Iterator;
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -18,21 +7,21 @@ import com.utils.ExcelUtil;
 
 
 public class DataProviders {
-	static String baseDir = System.getProperty("user.dir");
-	static String FilePath;
-	static String SheetName;
-	static Object[][] data;
+	private static String baseDir = System.getProperty("user.dir");
+	
 	
 	/**
 	 * This method provides Radio button Tests
+	 * Each test data set includes the visible radio button text and the 
+	 * corresponding Form tag key (from testdata.properties) to be used for validation.
 	 * @return
 	 */
 	
 	@DataProvider(name = "expectedRadioButtons")
 	public  Object[][] radioButtonOptions() {
 		return new Object[][] {
-			{"Outstation One-Way"}, {"Outstation Round-Trip"},
-			{"Airport Transfers"}, {"Hourly Rentals"}
+			{"Outstation One-Way","Outstation_One_Way_form_tags"}, {"Outstation Round-Trip", "Outstation_Round_Trip_form_tags"},
+			{"Airport Transfers", "Airport_Transfers_form_tags"}, {"Hourly Rentals", "Hourly_Rentals_form_tags"}
 			};
 		
 	}
@@ -44,9 +33,9 @@ public class DataProviders {
 	
 	@Test@DataProvider(name = "validLocations")
 	public static Object[][] validLocationListData() {
-		FilePath = baseDir+"/src/test/resources/excel_files/City_Data.xlsx"; 
-		SheetName = "Valid_Data";
-		data= ExcelUtil.validLocationListData(FilePath,SheetName);
+		String FilePath = baseDir+"/src/test/resources/excel_files/City_Data.xlsx"; 
+		String SheetName = "Valid_Data";
+		Object[][] data= ExcelUtil.validLocationListData(FilePath,SheetName);
 		return data;
 		
 	}
@@ -57,9 +46,9 @@ public class DataProviders {
 	 */
 	@DataProvider(name = "sameLocations")
 	public static Object[][] sameLocationListData() {
-		FilePath = baseDir+"/src/test/resources/excel_files/City_Data.xlsx"; 
-		SheetName = "Same_City";
-		data= ExcelUtil.validLocationListData(FilePath,SheetName);
+		String FilePath = baseDir+"/src/test/resources/excel_files/City_Data.xlsx"; 
+		String SheetName = "Same_City";
+		Object[][] data= ExcelUtil.validLocationListData(FilePath,SheetName);
 		return data;
 		
 	}

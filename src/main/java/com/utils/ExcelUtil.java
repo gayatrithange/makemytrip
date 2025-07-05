@@ -46,6 +46,8 @@ public class ExcelUtil {
 					case NUMERIC:
 	                    data[i - 1][j] = cell.getNumericCellValue();
 	                    break;
+					default:
+						break;
 					}
 				}
 			}	

@@ -36,15 +36,15 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 
 	// TC_Cab_006
 	@Test(dataProvider = "expectedRadioButtons", dataProviderClass = com.dataDrivenTesting.DataProviders.class, dependsOnMethods = "RideTypeRadioButtonCountTest")
-	public void RideTypeRadioButtonTextTest(String radioButtonText) {
+	public void RideTypeRadioButtonTextTest(String radioButtonText, String formTag) {
 		for (WebElement radioBtn : actualRadioBtnText) {
+			System.out.println(radioBtn);
 			if (radioBtn.getText().contains(radioButtonText)) {
 				Assert.assertTrue(radioBtn.isDisplayed(), radioButtonText);
 			}
 		}
 
-		WebElement rideBtn = driver.findElement(By.xpath(
-				"//ul[@class='latoBlack greyText b2c_cswTabs']/descendant::li[text()='" + radioButtonText + "']"));
+		WebElement rideBtn = driver.findElement(By.xpath("//ul[@class='latoBlack greyText b2c_cswTabs']/descendant::li[text()='" + radioButtonText + "']"));
 		rideBtn.click();
 		attr = rideBtn.getDomAttribute("class");
 		if (attr.contains("selectedText"))
@@ -52,6 +52,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 
 		else
 			AssertJUnit.assertTrue(false);
+		
 
 	}
 

@@ -1,72 +1,15 @@
 package com.makeMyTrip.selenium_cabsTests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import java.util.List;
-
-import static org.testng.Assert.assertEquals;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-public class OutstationOneWay_Validations extends BaseTest {
-	/**
-	 * This Method verifies Form input fields of Outstation One-Way
-	 */
-	@Test
-	public void verifyFormInputTagsForOutStationOneWay() {
-		String[] expectedFormTags = { "From", "To", "Departure", "Return", "Pickup-Time" };
-		List<WebElement> actualFormTags = driver.findElements(By.xpath("//span[contains(@class , 'cswInputLabel')]"));
-
-		AssertJUnit.assertEquals(actualFormTags.size(), expectedFormTags.length);
-
-		for (int i = 0; i < expectedFormTags.length; i++) {
-			String actual = actualFormTags.get(i).getText();
-			String expected = expectedFormTags[i];
-			AssertJUnit.assertEquals(actual, expected);
-
-		}
-	}
-
-	/**
-	 * This method verifies error message after entering same From and To input
-	 * fields
-	 */
-	@Test
-	public void sameFromAndToCityErrorMsgValidation() {
-		String expectedErrMsg = "The Origin City & Destination City cannot be the same.";
-
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id=\"fromCity\"]")));
-		driver.findElement(By.xpath("//input[@id=\"fromCity\"]")).click();
-
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//div[@class=\"autoSuggestPlugin hsw_autocomplePopup\"]//child::div//child::input")))
-				.sendKeys("pune");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//div[@class='autoSuggestPlugin hsw_autocomplePopup']//following::span[text()='Pune, Maharashtra, India']")))
-				.click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//div[@class='autoSuggestPlugin hsw_autocomplePopup']//child::div//child::input")))
-				.sendKeys("pune");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-				"//div[@class='autoSuggestPlugin hsw_autocomplePopup']//following::span[text()='Pune, Maharashtra, India']")))
-				.click();
-		String actualErrMsg = driver
-				.findElement(By.xpath("//div[@id=\"errorMessage\"]//child::span[@class='redText errorMsgText']"))
-				.getText();
-		AssertJUnit.assertEquals(expectedErrMsg, actualErrMsg);
-		System.out.println(actualErrMsg);
-
-	}
-
+public class OutstationOneWay extends BaseTest {
 	/**
 	 * This method verifies default Departure Date
 	 */
