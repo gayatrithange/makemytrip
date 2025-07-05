@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
@@ -105,7 +106,7 @@ public class OutstationOneWay extends BaseTest {
 		System.err.println("childTitle : " + childTitle);
 
 		if (parentTitle != childTitle)
-			AssertJUnit.assertTrue(true);
+			Assert.assertTrue(true);
 		else
 			AssertJUnit.assertTrue(false);
 
