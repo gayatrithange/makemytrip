@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makeMyTrip.selenium_cabsTests.OutstationOneWayTests_usingKeyword">
+      <class name="com.makeMyTrip.selenium_cabsTests.TestClass">
         <methods>
           <include name="launchBrowser"/>
-          <include name="sameFromAndToCityErrorMsgValidation" invocation-numbers="15"/>
-          <include name="quitBrowser"/>
+          <include name="validOutstationOneWayCabSearch"/>
         </methods>
-      </class> <!-- com.makeMyTrip.selenium_cabsTests.OutstationOneWayTests_usingKeyword -->
+      </class> <!-- com.makeMyTrip.selenium_cabsTests.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

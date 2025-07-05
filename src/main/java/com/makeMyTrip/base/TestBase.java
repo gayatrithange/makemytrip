@@ -4,10 +4,12 @@ import static com.makeMyTrip.base.Keyword.*;
 import static com.makeMyTrip.base.LocatorType.*;
 import static com.utils.FileUtil.getLocator;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-
+import com.makeMyTrip.pages.LoginPage;
 import com.utils.ApplicationUtil;
 
 public class TestBase {
@@ -24,10 +26,12 @@ public class TestBase {
 	openBrowser(ApplicationUtil.getBrowserName());
 	launchURL(ApplicationUtil.getAppUrl());
 	driver.manage().window().maximize();
-	clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
+	LoginPage login = PageFactory.initElements(driver, LoginPage.class);
+	login.clickOnCloseBtnOfLoginSignUpPo();
+	//clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
 	}
 	
-	@AfterMethod
+	
     public void quitBrowser() {
 		quitAllWindows();
     }

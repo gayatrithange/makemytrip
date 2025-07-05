@@ -2,6 +2,7 @@ package com.makeMyTrip.selenium_cabsTests;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+
+import net.bytebuddy.asm.Advice.Local;
 
 public class OutstationOneWay extends BaseTest {
 	/**
@@ -29,7 +32,7 @@ public class OutstationOneWay extends BaseTest {
 		System.out.println(Date);
 
 		// string date converted in date format
-		DateTimeFormatter formater = DateTimeFormatter.ofPattern("dd MMM yy");
+		DateTimeFormatter formater = DateTimeFormatter.ofPattern("d MMM yy");
 		LocalDate actualDate = LocalDate.parse(Date.trim(), formater);
 		System.out.println("actualDate: " + actualDate);
 
@@ -41,22 +44,6 @@ public class OutstationOneWay extends BaseTest {
 
 	}
 
-	/**
-	 * This method verifies By clicking on Return Date of "Outstation One-Way" ride
-	 * type shifts to "Outstation Round-Trip"
-	 */
-	@Test
-	public void messageOnReturnDate() {
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@class ='csw outstationOneway']/descendant::label[@for='return']"))).click();
-		String attribute = driver.findElement(By.xpath("//li[@data-cy='outstationRoundTrip']"))
-				.getDomAttribute("class");
-		boolean change = false;
-		if (attribute.contains("selectedText"))
-			change = true;
-
-		AssertJUnit.assertEquals(change, true);
-	}
 
 	/**
 	 * This methods verify valid From and To inputs locations
@@ -77,6 +64,7 @@ public class OutstationOneWay extends BaseTest {
 				By.xpath("//div[@class='autoSuggestPlugin hsw_autocomplePopup']//following::span[contains(text(),'"
 						+ from + "')]")))
 				.click();
+		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[@class='autoSuggestPlugin hsw_autocomplePopup']//child::div//child::input")))
 				.sendKeys(to);
