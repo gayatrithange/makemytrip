@@ -1,4 +1,4 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.AfterMethod;
 import java.awt.image.BufferedImage;

@@ -1,8 +1,8 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 
-import com.makeMyTrip.base.TestBase;
+import com.makemytrip.base.TestBase;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,9 +12,8 @@ import org.testng.AssertJUnit;
 
 import java.util.List;
 
-
-import static com.makeMyTrip.base.Keyword.*;
-import static com.makeMyTrip.base.LocatorType.*;
+import static com.makemytrip.base.Keyword.*;
+import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
 
 
@@ -24,7 +23,7 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 	 * This method verifies error message after entering same From and To input
 	 * fields
 	 */
-	@Test(dataProvider = "sameLocations", dataProviderClass = com.dataDrivenTesting.DataProviders.class)
+	@Test(dataProvider = "sameLocations", dataProviderClass = com.datadriventesting.DataProviders.class)
 	public void sameFromAndToCityErrorMsgValidation(String from, String to) {
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("click_on_from_input_box"));

@@ -1,4 +1,4 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -35,7 +35,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 	}
 
 	// TC_Cab_006
-	@Test(dataProvider = "expectedRadioButtons", dataProviderClass = com.dataDrivenTesting.DataProviders.class, dependsOnMethods = "RideTypeRadioButtonCountTest")
+	@Test(dataProvider = "expectedRadioButtons", dataProviderClass = com.datadriventesting.DataProviders.class, dependsOnMethods = "RideTypeRadioButtonCountTest")
 	public void RideTypeRadioButtonTextTest(String radioButtonText, String formTag) {
 		for (WebElement radioBtn : actualRadioBtnText) {
 			System.out.println(radioBtn);

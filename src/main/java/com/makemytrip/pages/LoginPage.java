@@ -1,4 +1,4 @@
-package com.makeMyTrip.pages;
+package com.makemytrip.pages;
 
 
 import org.openqa.selenium.WebElement;

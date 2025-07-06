@@ -1,4 +1,4 @@
-package com.makeMyTrip.base;
+package com.makemytrip.base;
 
 public interface Locators {
 

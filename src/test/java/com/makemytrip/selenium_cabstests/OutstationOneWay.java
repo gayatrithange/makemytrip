@@ -1,4 +1,4 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -51,7 +51,7 @@ public class OutstationOneWay extends BaseTest {
 	 * @param from
 	 * @param to
 	 */
-	@Test(dataProvider = "validLocations", dataProviderClass = com.dataDrivenTesting.DataProviders.class)
+	@Test(dataProvider = "validLocations", dataProviderClass = com.datadriventesting.DataProviders.class)
 	public void validOutstationOneWayCabSearch(String from, String to) {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='fromCity']")));
@@ -106,7 +106,7 @@ public class OutstationOneWay extends BaseTest {
 	 * @param from
 	 * @param to
 	 */
-	@Test(dataProvider = "sameLocations", dataProviderClass = com.dataDrivenTesting.DataProviders.class)
+	@Test(dataProvider = "sameLocations", dataProviderClass = com.datadriventesting.DataProviders.class)
 	public void SameInvalidOutstationOneWayCabSearch(String from, String to) {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id=\"fromCity\"]")));
 		driver.findElement(By.xpath("//input[@id=\"fromCity\"]")).click();

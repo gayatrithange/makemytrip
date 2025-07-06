@@ -1,4 +1,4 @@
-package com.makeMyTrip.base;
+package com.makemytrip.base;
 
 import java.time.Duration;
 import java.util.List;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.makeMyTrip.exceptions.InvalidBrowserNameException;
+import com.makemytrip.exceptions.InvalidBrowserNameException;
 @Test
 public class Keyword {
 	 
@@ -31,8 +31,7 @@ public class Keyword {
 		case "firefox":
 			driver = new FirefoxDriver();
 			break;
-		default:
-			throw new InvalidBrowserNameException(browserName);
+		
 		}
 	}
 	
