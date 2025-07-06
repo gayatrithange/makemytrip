@@ -8,7 +8,7 @@
 	<artifactId>makemytrip</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>selenium-tests</name>
+	<name>makemytrip</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
