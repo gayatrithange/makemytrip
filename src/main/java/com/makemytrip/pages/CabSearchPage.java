@@ -12,7 +12,7 @@ public class CabSearchPage {
 	WebElement clickOnFromCityTab;
 	
 	@FindBy(xpath = "//div[@class='autoSuggestPlugin hsw_autocomplePopup']//child::div//child::input")
-	WebElement enterTextOnFromCityTab;
+	WebElement enterTextOnFromCityTabElement;
 	
 	@FindBy(xpath = "//div[contains(@class,'outstationOneway')]//descendant::label[@for='departure']")
 	WebElement  clickOnDeparture;

@@ -1,10 +1,10 @@
-package com.makeMyTrip.pages;
+package com.makemytrip.pages;
 
 import org.openqa.selenium.By;
 
-import com.makeMyTrip.base.Keyword;
+import com.makemytrip.base.Keyword;
 
-import  static com.makeMyTrip.base.Keyword.*;
+import  static com.makemytrip.base.Keyword.*;
 
 
 

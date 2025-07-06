@@ -1,19 +1,17 @@
 package com.trains;
 
-import static com.mmt.utils.FileUtility.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.bidi.browsingcontext.Locator;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import static com.makeMyTrip.base.Keyword.*;
-import com.makeMyTrip.base.Locators;
-import com.makeMyTrip.base.TestBase;
-import com.makeMyTrip.pages.LoginPage;
+import static com.makemytrip.base.Keyword.*;
+import com.makemytrip.base.Locators;
+import com.makemytrip.base.TestBase;
+import com.makemytrip.pages.LoginPage;
 
-import  static com.makeMyTrip.pages.LoginPage.*;
+import  static com.makemytrip.pages.LoginPage.*;
 
 
 

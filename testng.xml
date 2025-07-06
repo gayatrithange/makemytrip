@@ -3,13 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.makeMyTrip.selenium_cabsTests.MakeMyTripNavigationTest"/>
-      <class name="com.makeMyTrip.selenium_cabsTests.OutstationOneWay_Validations"/>
-      <class name="com.makeMyTrip.selenium_cabsTests.OutstationRoadTrip_Validation"/>
-      <class name="com.makeMyTrip.selenium_cabsTests.BaseTest"/>
-      <class name="com.makeMyTrip.selenium_cabsTests.TestClass"/>
-      <class name="com.dataDrivenTesting.DataProviders"/>
-      <class name="com.makeMyTrip.selenium_cabsTests.RideTypeRadioButtonValidation"/>
+      <class name="com.makemytrip.selenium_cabsTests.MakeMyTripNavigationTest"/>
+      <class name="com.makemytrip.selenium_cabsTests.OutstationOneWay_Validations"/>
+      <class name="com.makemytrip.selenium_cabsTests.OutstationRoadTrip_Validation"/>
+      <class name="com.makemytrip.selenium_cabsTests.BaseTest"/>
+      <class name="com.makemytrip.selenium_cabsTests.TestClass"/>
+      <class name="com.datadriventesting.DataProviders"/>
+      <class name="com.makemytrip.selenium_cabsTests.RideTypeRadioButtonValidation"/>
       <class name="com.utils.ExcelUtil"/>
     </classes>
   </test> <!-- Test -->
