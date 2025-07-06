@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.makeMyTrip.</groupId>
-	<artifactId>selenium-tests</artifactId>
+	<artifactId>makemytrip</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>makemytrip</name>
+	<name>selenium-tests</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
