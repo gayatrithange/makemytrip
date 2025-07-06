@@ -1,6 +1,8 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 
 import com.makemytrip.base.TestBase;
 
@@ -32,7 +34,7 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 		enterText(XPATH, getLocator("enter_to_city_name"), to);
 		clickOnElement(XPATH, getLocator("click_on_given_city_name", to));
 		String errMsg = getText(XPATH, getLocator("error_msg"));
-		Assert.assertTrue(errMsg.contains("cannot be the same"));
+		AssertJUnit.assertTrue(errMsg.contains("cannot be the same"));
 		
 	}
 	
@@ -45,7 +47,7 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("click_on_outstation_one_way_form_tag_return"));
 		String val = getDomAttributeValue(XPATH, getLocator("outstation_road_trip_radio_btn"), "class");
-		Assert.assertTrue(val.contains("selectedText"));
+		AssertJUnit.assertTrue(val.contains("selectedText"));
 	}
 
 	
