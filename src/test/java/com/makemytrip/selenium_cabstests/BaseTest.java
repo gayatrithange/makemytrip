@@ -1,6 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
 import java.awt.image.BufferedImage;
 import java.time.Duration;
 
@@ -44,7 +45,8 @@ public class BaseTest {
 	
 	
 	
-    public void tearDown() {
+    @AfterMethod
+	public void tearDown() {
         if (driver != null) driver.quit();
     }
 	

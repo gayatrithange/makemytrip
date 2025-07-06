@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,7 +42,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		for (WebElement radioBtn : actualRadioBtnText) {
 			System.out.println(radioBtn);
 			if (radioBtn.getText().contains(radioButtonText)) {
-				Assert.assertTrue(radioBtn.isDisplayed(), radioButtonText);
+				AssertJUnit.assertTrue(radioBtn.isDisplayed(), radioButtonText);
 			}
 		}
 

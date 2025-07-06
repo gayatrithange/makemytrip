@@ -4,11 +4,11 @@
 	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.makeMyTrip.</groupId>
-	<artifactId>makemytrip</artifactId>
+	<groupId>com.makemytrip</groupId>
+	<artifactId>selenium-tests</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>makemytrip</name>
+	<name>selenium-tests</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 

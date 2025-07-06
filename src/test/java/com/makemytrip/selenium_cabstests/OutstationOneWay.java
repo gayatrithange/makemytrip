@@ -1,5 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -13,7 +15,7 @@ import org.testng.annotations.Test;
 
 import net.bytebuddy.asm.Advice.Local;
 
-public class OutstationOneWay extends BaseTest {
+public class OutstationOneWay extends TestBase {
 	/**
 	 * This method verifies default Departure Date
 	 */
@@ -94,7 +96,7 @@ public class OutstationOneWay extends BaseTest {
 		System.err.println("childTitle : " + childTitle);
 
 		if (parentTitle != childTitle)
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 		else
 			AssertJUnit.assertTrue(false);
 
