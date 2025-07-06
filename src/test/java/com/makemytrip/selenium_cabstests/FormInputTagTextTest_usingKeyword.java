@@ -1,7 +1,7 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
-import static com.makeMyTrip.base.Keyword.*;
-import static com.makeMyTrip.base.LocatorType.*;
+import static com.makemytrip.base.Keyword.*;
+import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
 
 import java.util.List;
@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.dataDrivenTesting.DataProviders;
-import com.makeMyTrip.base.TestBase;
+import com.datadriventesting.DataProviders;
+import com.makemytrip.base.TestBase;
 
 public class FormInputTagTextTest_usingKeyword extends TestBase {
 

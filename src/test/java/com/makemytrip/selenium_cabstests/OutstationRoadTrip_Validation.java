@@ -1,4 +1,4 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;

@@ -1,20 +1,21 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import com.makeMyTrip.base.TestBase;
-import com.makeMyTrip.pages.CabSearchPage;
-import com.makeMyTrip.pages.LoginPage;
 
-import static com.makeMyTrip.base.Keyword.*;
-import static com.makeMyTrip.base.LocatorType.*;
+import com.makemytrip.base.TestBase;
+import com.makemytrip.pages.CabSearchPage;
+import com.makemytrip.pages.LoginPage;
+
+import static com.makemytrip.base.Keyword.*;
+import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
 public class TestClass extends TestBase {
 
-	@Test(dataProvider = "sameLocations", dataProviderClass = com.dataDrivenTesting.DataProviders.class)
+	@Test(dataProvider = "sameLocations", dataProviderClass = com.datadriventesting.DataProviders.class)
 	public void sameFromAndToCityErrorMsgValidationUsingKeyword(String from, String to) {
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("click_on_from_input_box"));
@@ -53,8 +54,7 @@ public class TestClass extends TestBase {
 		// validation :
 
 		String childTitle = driver.getTitle();
-		System.err.println("childTitle : " + childTitle);
-
+		
 		if (parentTitle != childTitle)
 			Assert.assertTrue(true);
 		else

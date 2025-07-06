@@ -1,4 +1,4 @@
-package com.makeMyTrip.exceptions;
+package com.makemytrip.exceptions;
 
 public class InvalidBrowserNameException extends RuntimeException {
 	

@@ -1,4 +1,4 @@
-package com.makeMyTrip.selenium_cabsTests;
+package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.AfterMethod;
 import java.awt.image.BufferedImage;
@@ -41,6 +41,7 @@ public class BaseTest {
 		driver.findElement(By.xpath("//li[@class=\"menu_Cabs\"]")).click();
 		driver.manage().window().maximize();	
 	}
+	
 	
 	
     public void tearDown() {
