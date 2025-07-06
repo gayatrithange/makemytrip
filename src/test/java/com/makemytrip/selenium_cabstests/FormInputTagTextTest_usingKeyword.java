@@ -1,5 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static com.makemytrip.base.Keyword.*;
 import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
@@ -36,7 +38,7 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 			String expected = expectedFormTags[i].toLowerCase().trim();
 			System.out.print(actual + " " + expected);
 			System.out.println();
-			Assert.assertTrue(actual.contains(expected));
+			AssertJUnit.assertTrue(actual.contains(expected));
 
 		}
 		quitBrowser();
