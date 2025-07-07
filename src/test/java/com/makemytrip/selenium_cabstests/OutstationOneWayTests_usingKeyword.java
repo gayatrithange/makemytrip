@@ -49,5 +49,4 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 	}
 
 	
-
 }
