@@ -1,12 +1,12 @@
 package com.makemytrip.pages;
 
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.utils.WaitFor;
 
 public class LoginPage {
+	
 	
 	@FindBy(xpath = "//span[@class='commonModal__close']" )
 	WebElement loginSignUpCloseBtn;

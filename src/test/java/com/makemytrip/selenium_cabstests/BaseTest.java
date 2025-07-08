@@ -1,12 +1,9 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-import java.awt.image.BufferedImage;
 import java.time.Duration;
 
-import javax.imageio.ImageIO;
-import java.io.File;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -15,14 +12,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import org.testng.annotations.BeforeTest;
+
 
 public class BaseTest {
 	public RemoteWebDriver driver = null;
@@ -31,7 +23,7 @@ public class BaseTest {
 	
 	//TC_Cab_003
 	
-	@BeforeMethod
+	@BeforeTest
 	public void CabsButtonClickTest() throws IOException {
 		driver = new ChromeDriver();
 		 wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -45,11 +37,12 @@ public class BaseTest {
 	
 	
 	
-    @AfterMethod
+    //@AfterMethod
 	public void tearDown() {
         if (driver != null) driver.quit();
     }
-	
+    
+    
 	
 }
 

@@ -1,9 +1,13 @@
 package com.makemytrip.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.makemytrip.base.Keyword;
 import com.utils.WaitFor;
 
 public class CabSearchPage {
@@ -12,7 +16,7 @@ public class CabSearchPage {
 	WebElement clickOnFromCityTab;
 	
 	@FindBy(xpath = "//div[@class='autoSuggestPlugin hsw_autocomplePopup']//child::div//child::input")
-	WebElement enterTextOnFromCityTabElement;
+	WebElement enterTextOnFromCityTab;
 	
 	@FindBy(xpath = "//div[contains(@class,'outstationOneway')]//descendant::label[@for='departure']")
 	WebElement  clickOnDeparture;
@@ -38,11 +42,79 @@ public class CabSearchPage {
 	@FindBy(xpath = "//a[text() = 'Search']")
 	WebElement clickOnSearchBtn;
 	
+	@FindBy(xpath ="//div[@id='errorMessage']")
+	WebElement errorMsgForSameCity;
+	
+	public String errorMsgForSameCity(String attr) {
+		String attrVal = errorMsgForSameCity.getDomAttribute(attr);
+		return attrVal;
+	}
+	
 	public void clickOnSearchBtn() {
 		clickOnSearchBtn.click();
 
 	}
 	
+	@FindBy(css = "li[data-cy='outstationOneWay']")
+	WebElement clickOnOutstationOneWayRadioBtn;
+	
+	public void clickOnOutstationOneWayRadioBtn() {
+		clickOnOutstationOneWayRadioBtn.click();
+
+	}
+	
+	@FindBy(css = "li[data-cy='outstationRoundTrip']")
+	WebElement clickOnOutstationRoundTripRadioBtn;
+	
+	public void clickOnOutstationRoundTripRadioBtn() {
+		WaitFor.elementToBeVisible(clickOnOutstationRoundTripRadioBtn);
+		clickOnOutstationRoundTripRadioBtn.click();
+
+	}
+	
+	@FindBy(css = "li[data-cy='airportTransfer']")
+	WebElement clickOnAirportTransferRadioBtn;
+	
+	public void clickOnAirportTransferRadioBtn() {
+		clickOnAirportTransferRadioBtn.click();
+	}
+	
+	@FindBy(css = "li[data-cy='hourlyRental']")
+	WebElement clickOnHourlyRentalRadioBtn;
+	
+	
+	
+	public void clickOnMoreStopsCity(String city) {
+		WebElement ele = Keyword.driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/descendant::div/descendant::span[contains(text(),'"+city+"')]"));
+		Actions action = new Actions(Keyword.driver);
+		action.moveToElement(ele).click().perform();
+	}
+	@FindBy(xpath = "//ul[@class='react-autosuggest__suggestions-list']")
+	WebElement waitForCityListToBeVisible;
+	
+	public void waitForCityListToBeVisible() {
+		WaitFor.elementToBeVisible(waitForCityListToBeVisible);
+
+	}
+	@FindBy(css = "div.cabMulticityContainer p.addMoreTxt")
+	WebElement clickOnAddMoreStopsBtn;
+	
+	public void clickOnAddMoreStopsBtn() {
+		clickOnAddMoreStopsBtn.click();
+	}
+	public boolean isStopsBtnDisplayed() {
+		return clickOnAddMoreStopsBtn.isDisplayed();
+	}
+	
+	@FindBy(css = "div.multiCityView-container>div")
+	List<WebElement> getCountOfStops;
+	
+	public int getCountOfStops() {
+		int count = getCountOfStops.size();
+		return count;
+		
+
+	}
 	public void clickOnTime_ApplyBtn() {
 		clickOnTime_ApplyBtn.click();
 
@@ -93,6 +165,11 @@ public class CabSearchPage {
 		String value = "//div[@class='autoSuggestPlugin hsw_autocomplePopup']//following::span[contains(text(),'"+cityName+"')]";
 		By clickOnCity =By.xpath(value);
 		WaitFor.elementToBeVisible(clickOnCity).click();
+	}
+
+	public void clickOnHourlyRentalRadioBtn() {
+		clickOnHourlyRentalRadioBtn.click();
+		
 	}
 
 
