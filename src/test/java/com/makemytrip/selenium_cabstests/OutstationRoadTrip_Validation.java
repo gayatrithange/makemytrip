@@ -33,7 +33,9 @@ public class OutstationRoadTrip_Validation extends BaseTest  {
 	}
 	
 	
-	//TC_Cab_025
+	/**
+	 * This method verifies default departure date and return date
+	 */
 	@Test
 	public void defaultDepartureAndReturnDateValidation() {
 		driver.findElement(By.xpath("//div[@class=\"makeFlex\"]/descendant::li[@data-cy='outstationRoundTrip']")).click();

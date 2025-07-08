@@ -2,7 +2,6 @@ package com.makemytrip.pages;
 
 import org.openqa.selenium.By;
 
-import com.makemytrip.base.Keyword;
 
 import  static com.makemytrip.base.Keyword.*;
 
