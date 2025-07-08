@@ -25,8 +25,9 @@ public class TestBase {
 	//clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
 	}
 	
-	
-    public void quitBrowser() {
+	@AfterMethod
+    public void tearDown() {
 		quitAllWindows();
     }
+
 }

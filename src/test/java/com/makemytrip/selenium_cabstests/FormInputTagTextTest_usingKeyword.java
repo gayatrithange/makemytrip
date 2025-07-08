@@ -1,16 +1,14 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import static com.makemytrip.base.Keyword.*;
 import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
 
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import com.datadriventesting.DataProviders;
 import com.makemytrip.base.TestBase;
@@ -27,7 +25,8 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 	@Test(dataProvider = "expectedRadioButtons", dataProviderClass = DataProviders.class)
 	public void formInputTagsValidationForAllRadioBtns(String radioButtonText, String formInputTag) {
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
-		clickOnElement(XPATH, getLocator("radio_button", radioButtonText));
+		clickOnElement(XPATH, getLocator("all_radio_button", radioButtonText));
+		System.out.println("radioButtonText: "+ radioButtonText);
 		String[] expectedFormTags = getListFromProperty(formInputTag);
 		List<WebElement> actualFormTags = getListOfElementTexts(XPATH, getLocator("list_of_Cabs_form_tags"));
 		System.out.println(actualFormTags.size());
@@ -38,10 +37,10 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 			String expected = expectedFormTags[i].toLowerCase().trim();
 			System.out.print(actual + " " + expected);
 			System.out.println();
-			AssertJUnit.assertTrue(actual.contains(expected));
+			Assert.assertTrue(actual.contains(expected));
 
 		}
-		quitBrowser();
+		
 	}
 
 }
