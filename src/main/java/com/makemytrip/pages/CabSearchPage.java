@@ -156,8 +156,8 @@ public class CabSearchPage {
 	}
 	
 	public void enterCity(String text) {
-		WaitFor.elementToBeVisible(enterTextOnFromCityTabElement);
-		enterTextOnFromCityTabElement.sendKeys(text);
+		WaitFor.elementToBeVisible(enterTextOnFromCityTab);
+		enterTextOnFromCityTab.sendKeys(text);
 
 	}
 	

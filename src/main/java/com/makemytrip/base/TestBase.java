@@ -2,6 +2,7 @@ package com.makemytrip.base;
 
 import static com.makemytrip.base.Keyword.*;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.makemytrip.pages.LoginPage;
 import com.utils.ApplicationUtil;

@@ -37,7 +37,7 @@ public class BaseTest {
 	
 	
 	
-    //@AfterMethod
+    @AfterMethod
 	public void tearDown() {
         if (driver != null) driver.quit();
     }
