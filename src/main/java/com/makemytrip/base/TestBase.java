@@ -1,14 +1,8 @@
 package com.makemytrip.base;
 
 import static com.makemytrip.base.Keyword.*;
-import static com.makemytrip.base.LocatorType.*;
-import static com.utils.FileUtil.getLocator;
-
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
 import com.makemytrip.pages.LoginPage;
 import com.utils.ApplicationUtil;
 

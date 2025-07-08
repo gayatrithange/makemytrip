@@ -42,7 +42,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		for (WebElement radioBtn : actualRadioBtnText) {
 			System.out.println(radioBtn);
 			if (radioBtn.getText().contains(radioButtonText)) {
-				AssertJUnit.assertTrue(radioBtn.isDisplayed(), radioButtonText);
+				Assert.assertTrue(radioBtn.isDisplayed(), radioButtonText);
 			}
 		}
 
