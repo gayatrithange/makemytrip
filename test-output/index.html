@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM" class="method navigator-link" hash-for-method="addStopsButtonValidation">addStopsButtonValidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation" class="method navigator-link" hash-for-method="defaultDepartureAndReturnDateValidation">defaultDepartureAndReturnDateValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,23 +121,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM</span>
+              <span class="class-name">com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addStopsButtonValidation">
-                  </a> <!-- addStopsButtonValidation -->
-                  <span class="method-name">addStopsButtonValidation</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.cabMulticityContainer p.addMoreTxt&quot;}
+                  <a name="defaultDepartureAndReturnDateValidation">
+                  </a> <!-- defaultDepartureAndReturnDateValidation -->
+                  <span class="method-name">defaultDepartureAndReturnDateValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;]&quot;}
   (Session info: chrome=138.0.7204.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.6.1&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a54b8e0d911b62448469683014aef9db, findElement {using=css selector, value=div.cabMulticityContainer p.addMoreTxt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a54b8e0d911b62448469683014aef9db
+Command: [3d0268a35cf44ba6cc902b498f7f447a, findElement {value=//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58956/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d0268a35cf44ba6cc902b498f7f447a
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -152,11 +152,7 @@ Session ID: a54b8e0d911b62448469683014aef9db
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at com.makemytrip.pages.CabSearchPage.isStopsBtnDisplayed(CabSearchPage.java:106)
-	at com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM.addStopsButtonValidation(OutstationRoadTripTests_usingPOM.java:56)
+	at com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation.defaultDepartureAndReturnDateValidation(OutstationRoadTrip_Validation.java:41)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -192,7 +188,7 @@ Session ID: a54b8e0d911b62448469683014aef9db
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/zf/jt1v52f10ts7tqpd39w4y9jr0000gn/T/testng-eclipse--1276924416/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/zf/jt1v52f10ts7tqpd39w4y9jr0000gn/T/testng-eclipse-381438586/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,11 +197,11 @@ Session ID: a54b8e0d911b62448469683014aef9db
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM&quot;&gt;
+      &lt;class name=&quot;com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;addStopsButtonValidation&quot;/&gt;
+          &lt;include name=&quot;defaultDepartureAndReturnDateValidation&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM --&gt;
+      &lt;/class&gt; &lt;!-- com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -247,14 +243,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addStopsButtonValidation')
-data.setCell(0, 2, 'com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM')
-data.setCell(0, 3, 16297);
+data.setCell(0, 1, 'defaultDepartureAndReturnDateValidation')
+data.setCell(0, 2, 'com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation')
+data.setCell(0, 3, 10);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 10 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -273,9 +269,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM</span>
+              <span class="ignored-class-name">com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">validOutstationRoundTripCabSearch</span>
+                <span class="ignored-method-name">dropTimeButtonValidation</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -287,17 +283,21 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowser</span>
+              <div class="chronological-class-name">com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">CabsButtonClickTest</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">addStopsButtonValidation</span>
-                <span class="method-start">4088 ms</span>
+                <span class="method-name">defaultDepartureAndReturnDateValidation</span>
+                <span class="method-start">2984 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">2997 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

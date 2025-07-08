@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-08T13:41:51 IST" name="Default suite" finished-at="2025-07-08T13:42:11 IST" duration-ms="20401">
+  <suite started-at="2025-07-08T20:09:46 IST" name="Default suite" finished-at="2025-07-08T20:09:49 IST" duration-ms="3104">
     <groups>
     </groups>
-    <test started-at="2025-07-08T13:41:51 IST" name="Default test" finished-at="2025-07-08T13:42:11 IST" duration-ms="20401">
-      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM@3c19aaa5]" started-at="2025-07-08T13:41:51 IST" name="launchBrowser" finished-at="2025-07-08T13:41:55 IST" duration-ms="4082" status="PASS">
+    <test started-at="2025-07-08T20:09:46 IST" name="Default test" finished-at="2025-07-08T20:09:49 IST" duration-ms="3104">
+      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation">
+        <test-method is-config="true" signature="CabsButtonClickTest()[pri:0, instance:com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation@7e6f74c]" started-at="2025-07-08T20:09:46 IST" name="CabsButtonClickTest" finished-at="2025-07-08T20:09:49 IST" duration-ms="2976" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="addStopsButtonValidation()[pri:0, instance:com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM@3c19aaa5]" started-at="2025-07-08T13:41:55 IST" name="addStopsButtonValidation" finished-at="2025-07-08T13:42:11 IST" duration-ms="16297" status="FAIL">
+        </test-method> <!-- CabsButtonClickTest -->
+        <test-method signature="defaultDepartureAndReturnDateValidation()[pri:0, instance:com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation@7e6f74c]" started-at="2025-07-08T20:09:49 IST" name="defaultDepartureAndReturnDateValidation" finished-at="2025-07-08T20:09:49 IST" duration-ms="10" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"div.cabMulticityContainer p.addMoreTxt"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="makeFlex"]/descendant::li[@data-cy='outstationRoundTrip']"}
   (Session info: chrome=138.0.7204.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6.1', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a54b8e0d911b62448469683014aef9db, findElement {using=css selector, value=div.cabMulticityContainer p.addMoreTxt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a54b8e0d911b62448469683014aef9db]]>
+Command: [3d0268a35cf44ba6cc902b498f7f447a, findElement {value=//div[@class="makeFlex"]/descendant::li[@data-cy='outstationRoundTrip'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58956/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d0268a35cf44ba6cc902b498f7f447a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.cabMulticityContainer p.addMoreTxt"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class="makeFlex"]/descendant::li[@data-cy='outstationRoundTrip']"}
   (Session info: chrome=138.0.7204.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.31.0', revision: '1ef9f18787*'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6.1', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a54b8e0d911b62448469683014aef9db, findElement {using=css selector, value=div.cabMulticityContainer p.addMoreTxt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a54b8e0d911b62448469683014aef9db
+Command: [3d0268a35cf44ba6cc902b498f7f447a, findElement {value=//div[@class="makeFlex"]/descendant::li[@data-cy='outstationRoundTrip'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58956/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d0268a35cf44ba6cc902b498f7f447a
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -48,11 +48,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-at com.makemytrip.pages.CabSearchPage.isStopsBtnDisplayed(CabSearchPage.java:106)
-at com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM.addStopsButtonValidation(OutstationRoadTripTests_usingPOM.java:56)
+at com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation.defaultDepartureAndReturnDateValidation(OutstationRoadTrip_Validation.java:41)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -84,8 +80,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addStopsButtonValidation -->
-      </class> <!-- com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM -->
+        </test-method> <!-- defaultDepartureAndReturnDateValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation@7e6f74c]" started-at="2025-07-08T20:09:49 IST" name="tearDown" finished-at="2025-07-08T20:09:49 IST" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

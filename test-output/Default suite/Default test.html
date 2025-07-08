@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 08 13:41:51 IST 2025</td>
+<td>Started on:</td><td>Tue Jul 08 20:09:46 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20401 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3104 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM.addStopsButtonValidation()'><b>addStopsButtonValidation</b><br>Test class: com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.cabMulticityContainer p.addMoreTxt&quot;}
+<td title='com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation.defaultDepartureAndReturnDateValidation()'><b>defaultDepartureAndReturnDateValidation</b><br>Test class: com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;]&quot;}
   (Session info: chrome=138.0.7204.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.6.1&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a54b8e0d911b62448469683014aef9db, findElement {using=css selector, value=div.cabMulticityContainer p.addMoreTxt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a54b8e0d911b62448469683014aef9db
+Command: [3d0268a35cf44ba6cc902b498f7f447a, findElement {value=//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58956/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d0268a35cf44ba6cc902b498f7f447a
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -100,11 +100,7 @@ Session ID: a54b8e0d911b62448469683014aef9db
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at com.makemytrip.pages.CabSearchPage.isStopsBtnDisplayed(CabSearchPage.java:106)
-	at com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM.addStopsButtonValidation(OutstationRoadTripTests_usingPOM.java:56)
+	at com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation.defaultDepartureAndReturnDateValidation(OutstationRoadTrip_Validation.java:41)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -131,16 +127,16 @@ Session ID: a54b8e0d911b62448469683014aef9db
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1470420462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1470420462'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.cabMulticityContainer p.addMoreTxt&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace2070160397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070160397'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;]&quot;}
   (Session info: chrome=138.0.7204.93)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.6.1&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a54b8e0d911b62448469683014aef9db, findElement {using=css selector, value=div.cabMulticityContainer p.addMoreTxt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56493}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56493/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a54b8e0d911b62448469683014aef9db
+Command: [3d0268a35cf44ba6cc902b498f7f447a, findElement {value=//div[@class=&quot;makeFlex&quot;]/descendant::li[@data-cy=&apos;outstationRoundTrip&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: /var/folders/zf/jt1v52f10ts...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58956/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d0268a35cf44ba6cc902b498f7f447a
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -155,11 +151,7 @@ Session ID: a54b8e0d911b62448469683014aef9db
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at com.makemytrip.pages.CabSearchPage.isStopsBtnDisplayed(CabSearchPage.java:106)
-	at com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM.addStopsButtonValidation(OutstationRoadTripTests_usingPOM.java:56)
+	at com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation.defaultDepartureAndReturnDateValidation(OutstationRoadTrip_Validation.java:41)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -187,8 +179,8 @@ Session ID: a54b8e0d911b62448469683014aef9db
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>16</td>
-<td>com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM@3c19aaa5</td></tr>
+<td>0</td>
+<td>com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation@7e6f74c</td></tr>
 </table><p>
 </body>
 </html>

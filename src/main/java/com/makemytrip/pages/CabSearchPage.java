@@ -113,8 +113,22 @@ public class CabSearchPage {
 		int count = getCountOfStops.size();
 		return count;
 		
+   
+	}
+	
+	@FindBy(css = "p[data-cy = 'departureDate']>span")
+	List<WebElement> departureDate;
+	
+	public String getDepartureDate() {
+		String date = "";
+		WaitFor.elementToBeVisible(departureDate.get(1));
+		for (int i = 0; i < 3; i++) {
+			date += departureDate.get(i).getText()+" ";
+		}
+		return date;
 
 	}
+	
 	public void clickOnTime_ApplyBtn() {
 		clickOnTime_ApplyBtn.click();
 

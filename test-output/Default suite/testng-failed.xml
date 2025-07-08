@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM">
+      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="addStopsButtonValidation"/>
+          <include name="tearDown"/>
+          <include name="CabsButtonClickTest"/>
+          <include name="defaultDepartureAndReturnDateValidation"/>
         </methods>
-      </class> <!-- com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM -->
+      </class> <!-- com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
