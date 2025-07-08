@@ -1,10 +1,9 @@
 package com.makemytrip.selenium_cabstests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.openqa.selenium.support.PageFactory;
+
 import com.makemytrip.base.TestBase;
-import com.makemytrip.pages.CabSearchPage;
-import com.makemytrip.pages.LoginPage;
+
 
 import static com.makemytrip.base.Keyword.*;
 import static com.makemytrip.base.LocatorType.*;

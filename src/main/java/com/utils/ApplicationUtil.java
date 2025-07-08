@@ -1,9 +1,5 @@
 package com.utils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
 
 public class ApplicationUtil {
 	 static String baseDir = System.getProperty("user.dir");
