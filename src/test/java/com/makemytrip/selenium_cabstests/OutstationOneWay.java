@@ -26,7 +26,7 @@ class OutstationOneWay extends BaseTest {
 		}
 		System.out.println(Date);
 
-		// string date converted in date format
+		//string date converted in date format
 		DateTimeFormatter formater = DateTimeFormatter.ofPattern("d MMM yy");
 		LocalDate actualDate = LocalDate.parse(Date.trim(), formater);
 		System.out.println("actualDate: " + actualDate);
