@@ -1,8 +1,12 @@
 package com.makemytrip.base;
 
+import java.nio.file.LinkOption;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Keyword {
+	private static final Logger LOG = LogManager.getLogger(Keyword.class);
 	 
 	public static RemoteWebDriver driver;
 	static WebDriverWait wait = null;
@@ -23,6 +28,7 @@ public class Keyword {
 		switch(browserName.toLowerCase()) {
 		case "chrome":
 			 driver = new ChromeDriver();
+			 LOG.info("Chrome browser launched..");
 			break;
 		case "safari":
 			driver = new SafariDriver();
@@ -36,14 +42,17 @@ public class Keyword {
 	
 	public static void closeBrowser() {
 		driver.close();
+		LOG.info("Closed Current browser..");
 	}
 	
 	public static void quitAllWindows() {
 		driver.quit();
+		LOG.info("Closed all associated windows..");
 	}
 
 	public static void launchURL(String url) {
 		driver.get(url);
+		LOG.info("URL launched : "+url);
 		
 	}
 	/**

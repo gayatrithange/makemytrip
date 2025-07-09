@@ -8,12 +8,17 @@ import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;
 
 import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 
 import com.datadriventesting.DataProviders;
 import com.makemytrip.base.TestBase;
 
 public class FormInputTagTextTest_usingKeyword extends TestBase {
+	private static final Logger LOG = LogManager.getLogger(FormInputTagTextTest_usingKeyword.class);
+
 
 	/**
 	 * Validates the presence form input tag after clicking on a given radio button
@@ -26,10 +31,8 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 	public void formInputTagsValidationForAllRadioBtns(String radioButtonText, String formInputTag) {
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("all_radio_button", radioButtonText));
-		System.out.println("radioButtonText: "+ radioButtonText);
 		String[] expectedFormTags = getListFromProperty(formInputTag);
 		List<WebElement> actualFormTags = getListOfElementTexts(XPATH, getLocator("list_of_Cabs_form_tags"));
-		System.out.println(actualFormTags.size());
 
 		for (int i = 0; i < expectedFormTags.length; i++) {
 			String actual = actualFormTags.get(i).getText().toLowerCase().trim();
@@ -40,6 +43,7 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 			Assert.assertTrue(actual.contains(expected));
 
 		}
+		LOG.info("Imput form tags are correct for : "+radioButtonText);
 		
 	}
 
