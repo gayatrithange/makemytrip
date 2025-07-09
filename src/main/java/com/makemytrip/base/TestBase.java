@@ -1,6 +1,9 @@
 package com.makemytrip.base;
 
 import static com.makemytrip.base.Keyword.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -8,6 +11,8 @@ import com.makemytrip.pages.LoginPage;
 import com.utils.ApplicationUtil;
 
 public class TestBase {
+	private static final Logger LOG = LogManager.getLogger(TestBase.class);
+
 	
 	/**
 	 * Launches the browser, navigates to the application URL, 
@@ -23,7 +28,7 @@ public class TestBase {
 	driver.manage().window().maximize();
 	LoginPage login = PageFactory.initElements(driver, LoginPage.class);
 	login.clickOnCloseBtnOfLoginSignUpPo();
-	//clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
+	LOG.info("Launched browser : Launched URL : and closed login signup popup");
 	}
 	
 	@AfterMethod

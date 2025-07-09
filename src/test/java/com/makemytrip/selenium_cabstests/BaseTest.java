@@ -6,6 +6,8 @@ import java.time.Duration;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -17,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 
 
 public class BaseTest {
+	private static final Logger LOG = LogManager.getLogger(BaseTest.class);
 	public RemoteWebDriver driver = null;
 	WebDriverWait wait = null;
 	Actions actions = null;
@@ -24,7 +27,9 @@ public class BaseTest {
 	//TC_Cab_003
 	
 	@BeforeTest
-	public void CabsButtonClickTest() throws IOException {
+	public void CabsButtonClickTest() {
+		
+
 		driver = new ChromeDriver();
 		 wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		actions = new Actions(driver);
@@ -33,6 +38,7 @@ public class BaseTest {
 		driver.findElement(By.xpath("//span[@class=\"commonModal__close\"]")).click();
 		driver.findElement(By.xpath("//li[@class=\"menu_Cabs\"]")).click();
 		driver.manage().window().maximize();	
+		
 	}
 	
 	

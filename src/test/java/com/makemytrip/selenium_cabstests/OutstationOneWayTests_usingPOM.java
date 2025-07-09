@@ -5,6 +5,8 @@ import static com.makemytrip.base.Keyword.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,6 +18,8 @@ import com.makemytrip.pages.CabSearchPage;
 import com.makemytrip.pages.LoginPage;
 
 public class OutstationOneWayTests_usingPOM extends TestBase {
+	private static final Logger LOG = LogManager.getLogger(OutstationOneWayTests_usingPOM.class);
+
 
 	/**
 	 * This method verifies OutstationOneWay cab search functionality with valid
@@ -33,6 +37,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		cabsPage.clickOnCity(from);
 		cabsPage.enterCity(to);
 		cabsPage.clickOnCity(to);
+		LOG.info("Entered City -"+ from +" : "+to);
 		cabsPage.clickOnDeparture();
 		cabsPage.clickOnDepartureForwardArrow();
 		cabsPage.clickOnDepartureForwardArrow();
@@ -42,11 +47,13 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		cabsPage.clickOnTime_min();
 		cabsPage.clickOnTime_ApplyBtn();
 		String parentTitle = driver.getTitle();
+		LOG.info("Extracted ParentPage Title: "+parentTitle);
 		cabsPage.clickOnSearchBtn();
 
 		// validation :
 
 		String childTitle = driver.getTitle();
+		LOG.info("Extracted ChildPage Title: "+childTitle);
 
 		if (parentTitle != childTitle)
 			Assert.assertTrue(true);
@@ -70,6 +77,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		cabsPage.clickOnCity("Pune, Maharashtra, India");
 		cabsPage.enterCity("Pune, Maharashtra, India");
 		cabsPage.clickOnCity("Pune, Maharashtra, India");
+		LOG.info("Entered Same From and To City");
 		cabsPage.clickOnSearchBtn();
 		String attrVal = cabsPage.errorMsgForSameCity("class");
 		Assert.assertTrue(attrVal.contains("shake"), "Error Message did not shake");
@@ -82,7 +90,6 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 	@Test
 	public void FuelTpeFilterverification() {
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-		// loginPage.clickOnCloseBtnOfLoginSignUpPo();
 		loginPage.clickOnCabsBtn();
 
 		CabSearchPage cabsPage = PageFactory.initElements(driver, CabSearchPage.class);
@@ -95,8 +102,8 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		
 		CabResultPage resultPage = PageFactory.initElements(driver, CabResultPage.class);
 		resultPage.waitforFilterToBeVisible();
-		resultPage.clickOnTypeOfFuel("CNG");
-		Assert.assertTrue(resultPage.listOfAvailablecars("CNG"));
+		resultPage.clickOnTypeOfFuel("Diesel");
+		Assert.assertTrue(resultPage.listOfAvailablecars("Diesel"));
 		
 	}
 	/**
