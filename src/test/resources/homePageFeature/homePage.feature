@@ -1,6 +1,6 @@
 Feature: This feature file tests home features
 
-Scenario: verify Arrival Before 12 PM trains for searched trains.
+Scenario: verify Arrival for searched trains.
 Given: login popup is closed
 When:  user enters from city as Mumbai
 And:   user enters to city as goa
