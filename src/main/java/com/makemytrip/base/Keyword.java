@@ -28,7 +28,6 @@ public class Keyword {
 		switch(browserName.toLowerCase()) {
 		case "chrome":
 			 driver = new ChromeDriver();
-			 LOG.info("Chrome browser launched..");
 			break;
 		case "safari":
 			driver = new SafariDriver();
@@ -42,17 +41,14 @@ public class Keyword {
 	
 	public static void closeBrowser() {
 		driver.close();
-		LOG.info("Closed Current browser..");
 	}
 	
 	public static void quitAllWindows() {
 		driver.quit();
-		LOG.info("Closed all associated windows..");
 	}
 
 	public static void launchURL(String url) {
 		driver.get(url);
-		LOG.info("URL launched : "+url);
 		
 	}
 	/**

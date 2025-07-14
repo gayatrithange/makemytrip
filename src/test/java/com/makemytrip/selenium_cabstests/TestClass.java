@@ -1,4 +1,6 @@
 package com.makemytrip.selenium_cabstests;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,7 +21,7 @@ public class TestClass extends TestBase {
 		enterText(XPATH, getLocator("enter_to_city_name"), to);
 		clickOnElement(XPATH, getLocator("click_on_given_city_name", to));
 		String errMsg = getText(XPATH, getLocator("error_msg"));
-		Assert.assertTrue(errMsg.contains("cannot be the same"));
+		AssertJUnit.assertTrue(errMsg.contains("cannot be the same"));
 		
 		
 	}

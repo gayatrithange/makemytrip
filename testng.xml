@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTripTests_usingPOM"/>
+      <class name="com.makemytrip.selenium_trainstests.TrainsHomePageTests"/>
+      <class name="com.makemytrip.base.TestBase"/>
+      <class name="com.makemytrip.selenium_cabstests.FormInputTagTextTest_usingKeyword"/>
+      <class name="com.datadriventesting.DataProviders"/>
+      <class name="com.makemytrip.selenium_cabstests.OutstationOneWayTests_usingPOM"/>
+      <class name="com.makemytrip.selenium_cabstests.TestClass"/>
+      <class name="com.makemytrip.selenium_cabstests.RideTypeRadioButtonValidation"/>
+      <class name="com.makemytrip.selenium_cabstests.OutstationOneWayTests_usingKeyword"/>
+      <class name="com.utils.ExcelUtil"/>
+      <class name="com.makemytrip.selenium_cabstests.OutstationRoadTrip_Validation"/>
+      <class name="com.makemytrip.selenium_cabstests.BaseTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

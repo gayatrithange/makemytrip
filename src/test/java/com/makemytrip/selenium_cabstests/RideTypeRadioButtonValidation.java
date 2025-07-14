@@ -2,6 +2,8 @@ package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
 				By.xpath("(//li[@class=\"b2c_selected selectedText\" or @class = \"notSelectedText\"])[4]")));
 		actualRadioBtnText = driver.findElements(By.xpath("//ul[@class='latoBlack greyText b2c_cswTabs']//child::li"));
-		Assert.assertEquals(actualRadioBtnText.size(), expectedRadioBtnTextList.size());
+		AssertJUnit.assertEquals(actualRadioBtnText.size(), expectedRadioBtnTextList.size());
 		// System.out.println(actualRadioBtnText);
 	}
 
@@ -40,10 +42,10 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		rideBtn.click();
 		attr = rideBtn.getDomAttribute("class");
 		if (attr.contains("selectedText"))
-			Assert.assertTrue(true);
+			AssertJUnit.assertTrue(true);
 
 		else
-			Assert.assertTrue(false);
+			AssertJUnit.assertTrue(false);
 		
 
 	}
@@ -59,7 +61,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 			if (attr.equals(className))
 				selectedCount++;
 		}
-		Assert.assertEquals(selectedCount, 1);
+		AssertJUnit.assertEquals(selectedCount, 1);
 
 	}
 

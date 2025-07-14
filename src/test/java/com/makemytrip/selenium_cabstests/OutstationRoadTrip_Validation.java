@@ -1,6 +1,8 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -26,7 +28,7 @@ public class OutstationRoadTrip_Validation extends BaseTest  {
 			String tipMsg = driver.findElement(By.xpath("//div[@class='rtInfoTooltip']")).getText();
 			System.out.println(tipMsg);
 		}else
-			Assert.assertEquals(status, false);
+			AssertJUnit.assertEquals(status, false);
 		
 		//Search Button
 		driver.findElement(By.xpath("//a[text() = 'Search']")).click();
@@ -57,8 +59,8 @@ public class OutstationRoadTrip_Validation extends BaseTest  {
 		LocalDate expectedDate = LocalDate.now().plusDays(1);
 		//System.out.println(expectedDate);
 		
-		Assert.assertEquals(departureDate, expectedDate);
-		Assert.assertEquals(returnDate, expectedDate);
+		AssertJUnit.assertEquals(departureDate, expectedDate);
+		AssertJUnit.assertEquals(returnDate, expectedDate);
 		
 	}
 	

@@ -1,5 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static com.makemytrip.base.Keyword.*;
 
 import java.time.LocalDate;
@@ -54,11 +56,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 
 		String childTitle = driver.getTitle();
 		LOG.info("Extracted ChildPage Title: "+childTitle);
-
-		if (parentTitle != childTitle)
-			Assert.assertTrue(true);
-		else
-			Assert.assertTrue(false);
+		Assert.assertNotEquals(childTitle, parentTitle);
 
 	}
 
@@ -103,7 +101,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		CabResultPage resultPage = PageFactory.initElements(driver, CabResultPage.class);
 		resultPage.waitforFilterToBeVisible();
 		resultPage.clickOnTypeOfFuel("Diesel");
-		Assert.assertTrue(resultPage.listOfAvailablecars("Diesel"));
+		AssertJUnit.assertTrue(resultPage.listOfAvailablecars("Diesel"));
 		
 	}
 	/**
@@ -123,7 +121,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		LocalDate expectedDate = LocalDate.now().plusDays(1);
 		System.out.println("expectedDate: " + expectedDate);
 
-		Assert.assertEquals(expectedDate, actualDate);
+		AssertJUnit.assertEquals(expectedDate, actualDate);
 
 	}
 

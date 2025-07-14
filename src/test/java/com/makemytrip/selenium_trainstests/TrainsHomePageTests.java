@@ -1,5 +1,6 @@
 package com.makemytrip.selenium_trainstests;
 
+import org.testng.annotations.Test;
 import static com.makemytrip.base.Keyword.clickOnElement;
 import static com.makemytrip.base.Keyword.driver;
 import static com.makemytrip.base.Keyword.enterText;

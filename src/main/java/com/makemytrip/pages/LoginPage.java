@@ -28,7 +28,6 @@ public class LoginPage {
 	public void clickOnCloseBtnOfLoginSignUpPo() {
 		WaitFor.elementToBeVisible(loginSignUpCloseBtn);
 		loginSignUpCloseBtn.click();
-		LOG.info("Login signup popup closed");
 		
 
 	}
