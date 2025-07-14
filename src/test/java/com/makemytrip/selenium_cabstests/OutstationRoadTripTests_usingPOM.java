@@ -1,5 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import static com.makemytrip.base.Keyword.driver;
 
 import org.openqa.selenium.support.PageFactory;
@@ -33,11 +35,11 @@ public class OutstationRoadTripTests_usingPOM extends TestBase {
 		cabsPage.clickOnTime_Hr();
 		cabsPage.clickOnTime_ApplyBtn();
 		cabsPage.clickOnSearchBtn();
-		Assert.assertTrue((driver.getTitle()).contains("Cab Booking"));
+		AssertJUnit.assertTrue((driver.getTitle()).contains("Cab Booking"));
 	}
 	
 	/**
-	 * This method verifies add stops button get removed after five click.
+	 * This method verifies add stops button should get removed after five click.
 	 * @throws InterruptedException
 	 */
 	
@@ -62,7 +64,7 @@ public class OutstationRoadTripTests_usingPOM extends TestBase {
 				break;
 		}
 		
-		Assert.assertEquals(stopsCount, 5);
+		AssertJUnit.assertEquals(stopsCount, 5);
 		
 		
 	}

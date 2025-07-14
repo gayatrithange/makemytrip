@@ -1,5 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -40,7 +42,7 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 			String expected = expectedFormTags[i].toLowerCase().trim();
 			System.out.print(actual + " " + expected);
 			System.out.println();
-			Assert.assertTrue(actual.contains(expected));
+			AssertJUnit.assertTrue(actual.contains(expected));
 
 		}
 		LOG.info("Imput form tags are correct for : "+radioButtonText);
