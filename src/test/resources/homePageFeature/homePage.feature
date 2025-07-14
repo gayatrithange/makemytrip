@@ -8,4 +8,3 @@ And:   click on search trains button
 When:  search result page loads ,user clicks on arrival before 12 pm checkbox
 Then:  All trains which has arrival before 12 pm should appear.
 
-

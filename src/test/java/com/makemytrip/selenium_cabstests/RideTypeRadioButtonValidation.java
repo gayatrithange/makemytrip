@@ -2,21 +2,13 @@ package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class RideTypeRadioButtonValidation extends BaseTest {
 	String attr = "";
@@ -30,7 +22,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
 				By.xpath("(//li[@class=\"b2c_selected selectedText\" or @class = \"notSelectedText\"])[4]")));
 		actualRadioBtnText = driver.findElements(By.xpath("//ul[@class='latoBlack greyText b2c_cswTabs']//child::li"));
-		AssertJUnit.assertEquals(actualRadioBtnText.size(), expectedRadioBtnTextList.size());
+		Assert.assertEquals(actualRadioBtnText.size(), expectedRadioBtnTextList.size());
 		// System.out.println(actualRadioBtnText);
 	}
 
@@ -48,10 +40,10 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 		rideBtn.click();
 		attr = rideBtn.getDomAttribute("class");
 		if (attr.contains("selectedText"))
-			AssertJUnit.assertTrue(true);
+			Assert.assertTrue(true);
 
 		else
-			AssertJUnit.assertTrue(false);
+			Assert.assertTrue(false);
 		
 
 	}
@@ -67,7 +59,7 @@ public class RideTypeRadioButtonValidation extends BaseTest {
 			if (attr.equals(className))
 				selectedCount++;
 		}
-		AssertJUnit.assertEquals(selectedCount, 1);
+		Assert.assertEquals(selectedCount, 1);
 
 	}
 

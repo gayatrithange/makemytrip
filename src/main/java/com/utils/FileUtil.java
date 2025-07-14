@@ -1,9 +1,7 @@
 package com.utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 public class FileUtil {
@@ -64,12 +62,20 @@ public class FileUtil {
 	 * @param locatorKey
 	 * @return
 	 */
+	
 	public static String[] getListFromProperty(String locatorKey) {
 		String filePath = baseDir+"/src/test/resources/testdata.properties";
+		System.out.println(baseDir);
 		Properties prop = loadProperties(filePath);
+		System.out.println(filePath);
 		String locatorVal = prop.getProperty(locatorKey);
+		System.out.println(locatorVal);
 		String[] formTags = locatorVal.split(",");
 		return formTags;
+	}
+	
+	public static void main(String[] args) {
+		getListFromProperty("Outstation_One_Way_form_tags");
 	}
 	
 	

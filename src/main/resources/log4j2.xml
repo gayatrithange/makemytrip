@@ -15,7 +15,6 @@
                 <Pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%t] %-5level %c{1}.%M - %msg%n</Pattern>
             </PatternLayout>
             <Policies>
-                <!-- Roll over every day -->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
         </RollingFile>
@@ -23,12 +22,9 @@
     </Appenders>
 
     <Loggers>
-
-        <!-- Application Logger -->
-        <Root level="info">
+        <Root level="debug">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Root>
-
     </Loggers>
 </Configuration>

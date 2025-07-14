@@ -1,17 +1,8 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
-
-import com.makemytrip.base.TestBase;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-
-import java.util.List;
-
+import com.makemytrip.base.TestBase;
 import static com.makemytrip.base.Keyword.*;
 import static com.makemytrip.base.LocatorType.*;
 import static com.utils.FileUtil.*;

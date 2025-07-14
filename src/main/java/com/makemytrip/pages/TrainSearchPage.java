@@ -141,21 +141,4 @@ public class TrainSearchPage {
 
 	}
 
-//	
-//	By checkBoxof_Ac=By.cssSelector("li.appendBottom20>label[for=\"AC\"]");
-//	By numOf_AcTrains=By.cssSelector("li.appendBottom20>label[for=\"AC\"] div+span");
-//	By fliter_AcList_Count=By.cssSelector("p.ListingCard_trainNumText__vSho_");
-//	
-//	
-//	By CheckBox_Arrival_before_12_PM=By.cssSelector("li.appendBottom20:nth-child(2)>label[for=\"Arrival before 12 PM\"]");
-//	By fliter_Arrivalbefore12PM_Count=By.cssSelector("p.ListingCard_trainNumText__vSho_");
-//	By numof_Arrivalbefore_12_PM=By.cssSelector("li.appendBottom20:nth-child(2)>label[for=\"Arrival before 12 PM\"]>div+span.Checkbox_digitText__IEmwk");
-//	
-//	
-// public  void checkedOnAc() {
-////	 Keyword.clickOnElement(checkBoxof_Ac);
-//
-//}
-// 
-
 }
