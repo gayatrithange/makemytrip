@@ -1,43 +1,21 @@
 package com.makemytrip.base;
 
-import java.nio.file.LinkOption;
 import java.time.Duration;
 import java.util.List;
 
-import org.apache.commons.logging.Log;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-public class Keyword {
+public class Keyword extends TestBase {
 	private static final Logger LOG = LogManager.getLogger(Keyword.class);
-	 
-	public static RemoteWebDriver driver;
 	static WebDriverWait wait = null;
-	
-	public static void openBrowser(String browserName) {
-		switch(browserName.toLowerCase()) {
-		case "chrome":
-			 driver = new ChromeDriver();
-			break;
-		case "safari":
-			driver = new SafariDriver();
-            break;
-		case "firefox":
-			driver = new FirefoxDriver();
-			break;
-		
-		}
-	}
+	//static RemoteWebDriver driver = TestBase.driver;
 	
 	public static void closeBrowser() {
 		driver.close();
@@ -51,6 +29,7 @@ public class Keyword {
 		driver.get(url);
 		
 	}
+	
 	/**
 	 * This method waits until specified WebElement is Clickable and performs Click operation
 	 * @param locatorType

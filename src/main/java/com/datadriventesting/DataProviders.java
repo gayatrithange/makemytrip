@@ -36,7 +36,7 @@ public class DataProviders {
 	@Test@DataProvider(name = "validLocations")
 	public static Object[][] validLocationListData() {
 		String FilePath = baseDir+"/src/test/resources/excel_files/City_Data.xlsx"; 
-		String SheetName = "Valid_Data";
+		String SheetName = "Diff_City";
 		Object[][] data= ExcelUtil.validLocationListData(FilePath,SheetName);
 		return data;
 		

@@ -7,14 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.makemytrip.base.Keyword;
+import com.makemytrip.base.TestBase;
 
 public class WaitFor {
 	
-	public static WebDriverWait wait;
+	static WebDriverWait wait = null;
+	
 	
 	static {
-		wait = new WebDriverWait(Keyword.driver, Duration.ofSeconds(20));
+		wait = new WebDriverWait(TestBase.driver, Duration.ofSeconds(20));
 		wait.pollingEvery(Duration.ofMillis(500));
 		wait.withMessage("wait excedded");
 	}
@@ -31,7 +32,9 @@ public class WaitFor {
 	}
 
 	public static void elementToBeClickable(By locator) {
-		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		//wait.until(ExpectedConditions.elementToBeClickable(locator));
+		new WebDriverWait(TestBase.driver, Duration.ofSeconds(20))
+		.until(ExpectedConditions.elementToBeClickable(locator));
 		
 	}
 

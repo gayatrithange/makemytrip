@@ -1,8 +1,6 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
 import org.testng.Assert;
 import com.makemytrip.base.TestBase;
 import static com.makemytrip.base.Keyword.*;
@@ -18,6 +16,7 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 	 */
 	@Test(dataProvider = "sameLocations", dataProviderClass = com.datadriventesting.DataProviders.class)
 	public void sameFromAndToCityErrorMsgValidation(String from, String to) {
+		clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("click_on_from_input_box"));
 		enterText(XPATH,getLocator("enter_from_city_name"),from);
@@ -25,7 +24,7 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 		enterText(XPATH, getLocator("enter_to_city_name"), to);
 		clickOnElement(XPATH, getLocator("click_on_given_city_name", to));
 		String errMsg = getText(XPATH, getLocator("error_msg"));
-		AssertJUnit.assertTrue(errMsg.contains("cannot be the same"));
+		Assert.assertTrue(errMsg.contains("cannot be the same"));
 		
 	}
 	
@@ -35,10 +34,11 @@ public class OutstationOneWayTests_usingKeyword extends TestBase {
 	 */
 	@Test
 	public void messageOnReturnDate() {
+		clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("click_on_outstation_one_way_form_tag_return"));
 		String val = getDomAttributeValue(XPATH, getLocator("outstation_road_trip_radio_btn"), "class");
-		AssertJUnit.assertTrue(val.contains("selectedText"));
+		Assert.assertTrue(val.contains("selectedText"));
 	}
 
 	

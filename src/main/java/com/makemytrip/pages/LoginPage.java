@@ -29,6 +29,7 @@ public class LoginPage {
 		WaitFor.elementToBeVisible(loginSignUpCloseBtn);
 		loginSignUpCloseBtn.click();
 		
+		
 
 	}
 	

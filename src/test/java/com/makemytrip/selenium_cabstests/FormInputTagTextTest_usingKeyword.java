@@ -1,9 +1,7 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import static com.makemytrip.base.Keyword.*;
 import static com.makemytrip.base.LocatorType.*;
@@ -31,6 +29,7 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 	 */
 	@Test(dataProvider = "expectedRadioButtons", dataProviderClass = DataProviders.class)
 	public void formInputTagsValidationForAllRadioBtns(String radioButtonText, String formInputTag) {
+		clickOnElement(XPATH, getLocator("login_signup_popup_close_btn"));
 		clickOnElement(XPATH, getLocator("click_on_cabs_btn"));
 		clickOnElement(XPATH, getLocator("all_radio_button", radioButtonText));
 		String[] expectedFormTags = getListFromProperty(formInputTag);
@@ -42,7 +41,7 @@ public class FormInputTagTextTest_usingKeyword extends TestBase {
 			String expected = expectedFormTags[i].toLowerCase().trim();
 			System.out.print(actual + " " + expected);
 			System.out.println();
-			AssertJUnit.assertTrue(actual.contains(expected));
+			Assert.assertTrue(actual.contains(expected));
 
 		}
 		LOG.info("Imput form tags are correct for : "+radioButtonText);
