@@ -1,6 +1,8 @@
 package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
@@ -12,23 +14,20 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import org.testng.annotations.BeforeTest;
 
 
 public class BaseTest {
 	private static final Logger LOG = LogManager.getLogger(BaseTest.class);
-	public RemoteWebDriver driver = null;
-	WebDriverWait wait = null;
-	Actions actions = null;
+	 RemoteWebDriver driver = null;
+	 WebDriverWait wait = null;
+	 Actions actions = null;
 	
 	//TC_Cab_003
 	
-	@BeforeTest
+	@BeforeMethod
 	public void CabsButtonClickTest() {
-		
-
 		driver = new ChromeDriver();
-		 wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		actions = new Actions(driver);
 		driver.get("https://www.makemytrip.com/");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class=\"commonModal__close\"]")));

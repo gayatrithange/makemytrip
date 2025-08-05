@@ -2,17 +2,12 @@ package com.makemytrip.selenium_cabstests;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import static com.makemytrip.base.Keyword.*;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.datadriventesting.DataProviders;
 import com.makemytrip.base.TestBase;
 import com.makemytrip.pages.CabResultPage;
@@ -30,7 +25,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 	@Test(dataProvider = "validLocations", dataProviderClass = DataProviders.class)
 	public void validOutstationOneWayCabSearch(String from, String to) {
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-		// loginPage.clickOnCloseBtnOfLoginSignUpPo();
+		loginPage.clickOnCloseBtnOfLoginSignUpPo();
 		loginPage.clickOnCabsBtn();
 
 		CabSearchPage cabsPage = PageFactory.initElements(driver, CabSearchPage.class);
@@ -48,13 +43,13 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 		cabsPage.clickOnTime_Hr();
 		cabsPage.clickOnTime_min();
 		cabsPage.clickOnTime_ApplyBtn();
-		String parentTitle = driver.getTitle();
+		String parentTitle = TestBase.driver.getTitle();
 		LOG.info("Extracted ParentPage Title: "+parentTitle);
 		cabsPage.clickOnSearchBtn();
 
 		// validation :
 
-		String childTitle = driver.getTitle();
+		String childTitle = TestBase.driver.getTitle();
 		LOG.info("Extracted ChildPage Title: "+childTitle);
 		Assert.assertNotEquals(childTitle, parentTitle);
 
@@ -67,6 +62,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 	@Test
 	public void SameInvalidOutstationOneWayCabSearch() {
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		loginPage.clickOnCloseBtnOfLoginSignUpPo();
 		loginPage.clickOnCabsBtn();
 
 		CabSearchPage cabsPage = PageFactory.initElements(driver, CabSearchPage.class);
@@ -88,6 +84,7 @@ public class OutstationOneWayTests_usingPOM extends TestBase {
 	@Test
 	public void FuelTpeFilterverification() {
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		loginPage.clickOnCloseBtnOfLoginSignUpPo();
 		loginPage.clickOnCabsBtn();
 
 		CabSearchPage cabsPage = PageFactory.initElements(driver, CabSearchPage.class);

@@ -6,8 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
-import com.makemytrip.base.Keyword;
+import com.makemytrip.base.TestBase;
 import com.utils.WaitFor;
 
 public class CabSearchPage {
@@ -50,6 +51,29 @@ public class CabSearchPage {
 		return attrVal;
 	}
 	
+	@FindBy(css = "div.outstationOneway>div label[for = 'return']")
+	WebElement clicksOnReturnDate;
+	
+	
+	public void clicksOnReturnDate() {
+		WaitFor.elementToBeClickable(clicksOnReturnDate);
+		clicksOnReturnDate.click();
+	}
+	
+	@FindBy(xpath= "//li[@data-cy='outstationRoundTrip']")
+	WebElement radioButtonShiftsCheck;
+	
+	public String domAttributevalOfRideType() {
+		String val = radioButtonShiftsCheck.getDomAttribute("class");
+		return val;
+		
+	}
+	
+	public String getErrorMsg() {
+		String errMsg = errorMsgForSameCity.getText();
+		return errMsg;
+	}
+	
 	public void clickOnSearchBtn() {
 		clickOnSearchBtn.click();
 
@@ -85,8 +109,8 @@ public class CabSearchPage {
 	
 	
 	public void clickOnMoreStopsCity(String city) {
-		WebElement ele = Keyword.driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/descendant::div/descendant::span[contains(text(),'"+city+"')]"));
-		Actions action = new Actions(Keyword.driver);
+		WebElement ele = TestBase.driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/descendant::div/descendant::span[contains(text(),'"+city+"')]"));
+		Actions action = new Actions(TestBase.driver);
 		action.moveToElement(ele).click().perform();
 	}
 	@FindBy(xpath = "//ul[@class='react-autosuggest__suggestions-list']")
@@ -178,7 +202,8 @@ public class CabSearchPage {
 	public void clickOnCity(String cityName) {
 		String value = "//div[@class='autoSuggestPlugin hsw_autocomplePopup']//following::span[contains(text(),'"+cityName+"')]";
 		By clickOnCity =By.xpath(value);
-		WaitFor.elementToBeVisible(clickOnCity).click();
+		WaitFor.elementToBeClickable(clickOnCity);
+		TestBase.driver.findElement(clickOnCity).click();
 	}
 
 	public void clickOnHourlyRentalRadioBtn() {
